@@ -49,7 +49,7 @@ export default function LandingPage() {
               >
                 Spark Your Child’s <br />
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-500">
-                  Imagination & Voice
+                  Voice & Imagination
                 </span>
               </motion.h1>
               <motion.p
@@ -59,7 +59,7 @@ export default function LandingPage() {
                 variants={fadeIn}
                 className="text-lg text-gray-700 mb-8 max-w-lg mx-auto lg:mx-0"
               >
-                Join **Ally Jay Creative Writing Academy**, where kids ages **7–15** discover the magic of storytelling, poetry, and performance in a fun, nurturing environment.
+                Join  <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-500"> Ally Jay Creative Writing Academy</span>, where kids ages <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-500">7–15 </span>discover the magic of storytelling, poetry, and performance in a fun, nurturing environment.
               </motion.p>
               <motion.div
                 initial="hidden"
@@ -192,7 +192,6 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* 5. Program Details */}
       <section className="py-20 bg-purple-900 text-white">
         <div className="container mx-auto px-6">
           <div className="bg-white/10 backdrop-blur-lg rounded-3xl p-8 md:p-12 border border-white/20">
@@ -236,7 +235,6 @@ export default function LandingPage() {
           <div className="flex flex-col md:flex-row items-center gap-12">
             <div className="md:w-1/2 relative">
               <div className="absolute inset-0 bg-blue-200 rounded-full blur-3xl opacity-30 transform -translate-x-10"></div>
-              {/* Placeholder for Instructor Image */}
               <Image
                 src="/arit.jpg"
                 alt="Friendly Instructor"
@@ -247,9 +245,9 @@ export default function LandingPage() {
             </div>
             <div className="md:w-1/2">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Meet Your Instructor</h2>
-              <h3 className="text-xl text-purple-600 font-semibold mb-6">Ms. Alison Jay</h3>
+              <h3 className="text-xl text-purple-600 font-semibold mb-6">Ms. Harriet DM John</h3>
               <p className="text-gray-600 mb-6 leading-relaxed">
-                Alison is a passionate storyteller and educator with over 10 years of experience working with young writers. She believes that every child is a genius waiting to be discovered. Her sessions are filled with laughter, interactive games, and deep dives into the imagination. She has published two children's novels and loves helping students hold their very own first book.
+                Harriet is a passionate storyteller and educator with over 10 years of experience working with young writers. She believes that every child is a genius waiting to be discovered. Her sessions are filled with laughter, interactive games, and deep dives into the imagination. She has published two children's novels and loves helping students hold their very own first book.
               </p>
               <div className="text-gray-500 italic">"Teaching kids to write is about teaching them to think, feel, and fly."</div>
             </div>
@@ -257,7 +255,6 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* 7. Testimonials Section */}
       <section className="py-20 bg-yellow-50">
         <div className="container mx-auto px-6 text-center">
           <h2 className="text-3xl font-bold text-gray-900 mb-12">Happy Parents & Students</h2>
@@ -283,12 +280,12 @@ export default function LandingPage() {
 
       {/* 8. Registration Section */}
       <section id="register" className="py-20 bg-white">
-        <div className="container mx-auto px-6 max-w-3xl">
+        <div className="container mx-auto px-6">
           <div className="bg-gradient-to-r from-purple-600 to-indigo-600 rounded-3xl p-10 text-center text-white shadow-2xl">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Start the Adventure?</h2>
             <p className="text-purple-100 mb-8 text-lg">Spaces are limited! Secure your child's spot for the upcoming term today.</p>
             <a
-              href="https://forms.gle/VcCx5zuu44kSz1N66" // Placeholder
+              href="https://forms.gle/VcCx5zuu44kSz1N66" 
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block bg-white text-purple-600 font-bold py-4 px-10 rounded-full shadow-lg hover:bg-gray-100 transition transform hover:-translate-y-1"
@@ -302,7 +299,7 @@ export default function LandingPage() {
 
       {/* 9. FAQ Section */}
       <section className="py-20 bg-gray-50">
-        <div className="container mx-auto px-6 max-w-2xl">
+        <div className="container mx-auto px-6">
           <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Frequently Asked Questions</h2>
           <div className="space-y-4">
             {[
