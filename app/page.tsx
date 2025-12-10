@@ -218,8 +218,8 @@ export default function LandingPage() {
                 </div>
               </div>
               <div className="text-center md:text-right">
-                <div className="text-5xl font-bold text-yellow-400 mb-2">NGN</div>
-                <div className="text-purple-200 mb-6">per term (includes materials)</div>
+                <div className="text-5xl font-bold text-yellow-400 mb-2">NGN 5,000</div>
+                <div className="text-purple-200 mb-6">for first 20 people</div>
                 <button className="bg-yellow-400 text-purple-900 font-bold py-3 px-8 rounded-full hover:bg-yellow-300 transition">
                   Join Waitlist
                 </button>
@@ -236,7 +236,7 @@ export default function LandingPage() {
             <div className="md:w-1/2 relative">
               <div className="absolute inset-0 bg-blue-200 rounded-full blur-3xl opacity-30 transform -translate-x-10"></div>
               <Image
-                src="/arit.jpg"
+                src="/writer.jpg"
                 alt="Friendly Instructor"
                 width={500}
                 height={500}
@@ -249,7 +249,41 @@ export default function LandingPage() {
               <p className="text-gray-600 mb-6 leading-relaxed">
                 Harriet is a passionate storyteller and educator with over 10 years of experience working with young writers. She believes that every child is a genius waiting to be discovered. Her sessions are filled with laughter, interactive games, and deep dives into the imagination. She has published two children's novels and loves helping students hold their very own first book.
               </p>
-              <div className="text-gray-500 italic">"Teaching kids to write is about teaching them to think, feel, and fly."</div>
+              <div className="text-gray-500 italic mb-6">"Teaching kids to write is about teaching them to think, feel, and fly."</div>
+
+              {/* Social Media Links */}
+              <div className="flex gap-4">
+                {/* Instagram */}
+                <a
+                  href="#"
+                  className="text-gray-400 hover:text-pink-600 transition-colors transform hover:scale-110"
+                  aria-label="Instagram"
+                >
+                  <svg fill="currentColor" viewBox="0 0 24 24" className="w-6 h-6">
+                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.069-4.85.069-3.204 0-3.584-.011-4.849-.069-3.225-.149-4.771-1.664-4.919-4.919-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                  </svg>
+                </a>
+                {/* Facebook */}
+                <a
+                  href="#"
+                  className="text-gray-400 hover:text-blue-600 transition-colors transform hover:scale-110"
+                  aria-label="Facebook"
+                >
+                  <svg fill="currentColor" viewBox="0 0 24 24" className="w-6 h-6">
+                    <path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z" />
+                  </svg>
+                </a>
+                {/* LinkedIn */}
+                <a
+                  href="https://www.linkedin.com/in/arit-john-425a5b2ba/"
+                  className="text-gray-400 hover:text-blue-700 transition-colors transform hover:scale-110"
+                  aria-label="LinkedIn"
+                >
+                  <svg fill="currentColor" viewBox="0 0 24 24" className="w-6 h-6">
+                    <path d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z" />
+                  </svg>
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -285,7 +319,7 @@ export default function LandingPage() {
             <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Start the Adventure?</h2>
             <p className="text-purple-100 mb-8 text-lg">Spaces are limited! Secure your child's spot for the upcoming term today.</p>
             <a
-              href="https://forms.gle/VcCx5zuu44kSz1N66" 
+              href="https://forms.gle/VcCx5zuu44kSz1N66"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block bg-white text-purple-600 font-bold py-4 px-10 rounded-full shadow-lg hover:bg-gray-100 transition transform hover:-translate-y-1"
@@ -331,55 +365,55 @@ export default function LandingPage() {
       </section>
 
       {/* 10. Footer */}
-     <footer className="bg-gray-900 text-gray-400 py-12">
-  <div className="container mx-auto px-6">
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-10 items-start">
+      <footer className="bg-gray-900 text-gray-400 py-12">
+        <div className="container mx-auto px-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10 items-start">
 
-      {/* Left Section */}
-      <div className="text-center md:text-left space-y-2">
-        <h3 className="text-2xl font-bold text-white">Ally Jay Academy</h3>
-        <p className="leading-relaxed">Inspiring the next generation of writers.</p>
-      </div>
+            {/* Left Section */}
+            <div className="text-center md:text-left space-y-2">
+              <h3 className="text-2xl font-bold text-white">Ally Jay Academy</h3>
+              <p className="leading-relaxed">Inspiring the next generation of writers.</p>
+            </div>
 
-      {/* Middle Section */}
-      <div className="text-center space-y-2">
-        <p className="text-sm">
-          Built by{" "}
-          <a
-            href="https://thatdevelopergirl.vercel.app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="font-bold text-gray-200 hover:text-white transition"
-          >
-            thatdevelopergirl
-          </a>
-          <p className="text-sm">&copy; {new Date().getFullYear()} Ally Jay Academy</p>
-        <p className="text-sm">All rights reserved.</p>
-        </p>
-      </div>
+            {/* Middle Section */}
+            <div className="text-center space-y-2">
+              <p className="text-sm">
+                Built by{" "}
+                <a
+                  href="https://thatdevelopergirl.vercel.app"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-bold text-gray-200 hover:text-white transition"
+                >
+                  thatdevelopergirl
+                </a>
+                <p className="text-sm">&copy; {new Date().getFullYear()} Ally Jay Academy</p>
+                <p className="text-sm">All rights reserved.</p>
+              </p>
+            </div>
 
-      {/* Right Section */}
-      <div className="text-center md:text-right space-y-3">
-        
+            {/* Right Section */}
+            <div className="text-center md:text-right space-y-3">
 
-        <a
-          href="mailto:allyjaycreativewriters@gmail.com"
-          className="hover:text-white transition flex justify-center md:justify-end items-center gap-2"
-        >
-          <span>allyjaycreativewriters@gmail.com</span>
-        </a>
 
-        <a
-          href="tel:+2348137530125"
-          className="hover:text-white transition flex justify-center md:justify-end items-center gap-2"
-        >
-          <span>+234 813 753 0125</span>
-        </a>
-      </div>
+              <a
+                href="mailto:allyjaycreativewriters@gmail.com"
+                className="hover:text-white transition flex justify-center md:justify-end items-center gap-2"
+              >
+                <span>allyjaycreativewriters@gmail.com</span>
+              </a>
 
-    </div>
-  </div>
-</footer>
+              <a
+                href="tel:+2348137530125"
+                className="hover:text-white transition flex justify-center md:justify-end items-center gap-2"
+              >
+                <span>+234 813 753 0125</span>
+              </a>
+            </div>
+
+          </div>
+        </div>
+      </footer>
 
     </main>
   );
