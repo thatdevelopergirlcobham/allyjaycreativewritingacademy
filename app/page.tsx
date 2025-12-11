@@ -247,7 +247,7 @@ export default function LandingPage() {
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Meet Your Instructor</h2>
               <h3 className="text-xl text-purple-600 font-semibold mb-6">Ms. Harriet DM John</h3>
               <p className="text-gray-600 mb-6 leading-relaxed">
-                Harriet is a passionate storyteller and educator with over 10 years of experience working with young writers. She believes that every child is a genius waiting to be discovered. Her sessions are filled with laughter, interactive games, and deep dives into the imagination. She has published two children's novels and loves helping students hold their very own first book.
+                Harriet is a passionate storyteller and educator with over 10 years of experience working with young writers. She believes that every child is a genius waiting to be discovered. Her sessions are filled with laughter, interactive games, and deep dives into the imagination. She has published 9 children's novels and loves helping students hold their very own first book.
               </p>
               <div className="text-gray-500 italic mb-6">"Teaching kids to write is about teaching them to think, feel, and fly."</div>
 
