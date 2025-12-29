@@ -12,8 +12,9 @@ import {
   UserGroupIcon,
   ChevronDownIcon,
   QuestionMarkCircleIcon,
+  XMarkIcon,
 } from "@heroicons/react/24/outline";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 
 // FadeIn animation variant
@@ -24,6 +25,7 @@ const fadeIn = {
 
 export default function LandingPage() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
+  const [isWaitlistModalOpen, setIsWaitlistModalOpen] = useState(false);
 
   const toggleFaq = (index: number) => {
     setOpenFaq(openFaq === index ? null : index);
@@ -220,7 +222,10 @@ export default function LandingPage() {
               <div className="text-center md:text-right">
                 <div className="text-5xl font-bold text-yellow-400 mb-2">NGN 5,000</div>
                 <div className="text-purple-200 mb-6">for first 20 people</div>
-                <button className="bg-yellow-400 text-purple-900 font-bold py-3 px-8 rounded-full hover:bg-yellow-300 transition">
+                <button
+                  onClick={() => setIsWaitlistModalOpen(true)}
+                  className="bg-yellow-400 text-purple-900 font-bold py-3 px-8 rounded-full hover:bg-yellow-300 transition"
+                >
                   Join Waitlist
                 </button>
               </div>
@@ -377,7 +382,7 @@ export default function LandingPage() {
 
             {/* Middle Section */}
             <div className="text-center space-y-2">
-              <p className="text-sm">
+              <div className="text-sm">
                 Built by{" "}
                 <a
                   href="https://thatdevelopergirl.vercel.app"
@@ -387,9 +392,9 @@ export default function LandingPage() {
                 >
                   thatdevelopergirl
                 </a>
-                <p className="text-sm">&copy; {new Date().getFullYear()} Ally Jay Academy</p>
+                <p className="text-sm mt-1">&copy; {new Date().getFullYear()} Ally Jay Academy</p>
                 <p className="text-sm">All rights reserved.</p>
-              </p>
+              </div>
             </div>
 
             {/* Right Section */}
@@ -414,6 +419,91 @@ export default function LandingPage() {
           </div>
         </div>
       </footer>
+
+      {/* Waitlist Modal */}
+      <AnimatePresence>
+        {isWaitlistModalOpen && (
+          <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm">
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.9 }}
+              transition={{ duration: 0.3 }}
+              className="bg-white rounded-3xl p-8 max-w-lg w-full shadow-2xl relative overflow-hidden"
+            >
+              {/* Decorative background blobs */}
+              <div className="absolute top-0 right-0 -mr-20 -mt-20 w-60 h-60 bg-purple-100 rounded-full blur-3xl opacity-50 pointer-events-none"></div>
+              <div className="absolute bottom-0 left-0 -ml-20 -mb-20 w-60 h-60 bg-yellow-100 rounded-full blur-3xl opacity-50 pointer-events-none"></div>
+
+              <button
+                onClick={() => setIsWaitlistModalOpen(false)}
+                className="absolute top-5 right-5 text-gray-400 hover:text-gray-600 transition p-1 hover:bg-gray-100 rounded-full"
+              >
+                <XMarkIcon className="w-6 h-6" />
+              </button>
+
+              <div className="relative z-10">
+                <div className="text-center mb-8">
+                  <h3 className="text-3xl font-bold text-gray-900 mb-2">Join the Waitlist</h3>
+                  <p className="text-gray-600">Secure your spot and get notified when we open!</p>
+                </div>
+
+                <form className="space-y-5" onSubmit={(e) => { e.preventDefault(); alert("You've been added to the waitlist!"); setIsWaitlistModalOpen(false); }}>
+                  <div className="space-y-4">
+                    <div>
+                      <label className="block text-sm font-medium text-gray-700 mb-1.5 ml-1">Child's Name</label>
+                      <input
+                        type="text"
+                        required
+                        className="w-full px-5 py-3 rounded-xl border border-gray-200 bg-gray-50 focus:bg-white focus:border-purple-500 focus:ring-4 focus:ring-purple-500/10 outline-none transition-all duration-200"
+                        placeholder="e.g. David Adewale"
+                      />
+                    </div>
+
+                    <div>
+                      <label className="block text-sm font-medium text-gray-700 mb-1.5 ml-1">Child's Class/Grade</label>
+                      <input
+                        type="text"
+                        required
+                        className="w-full px-5 py-3 rounded-xl border border-gray-200 bg-gray-50 focus:bg-white focus:border-purple-500 focus:ring-4 focus:ring-purple-500/10 outline-none transition-all duration-200"
+                        placeholder="e.g. Grade 4 / Year 5"
+                      />
+                    </div>
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                      <div>
+                        <label className="block text-sm font-medium text-gray-700 mb-1.5 ml-1">Parent's Email</label>
+                        <input
+                          type="email"
+                          required
+                          className="w-full px-5 py-3 rounded-xl border border-gray-200 bg-gray-50 focus:bg-white focus:border-purple-500 focus:ring-4 focus:ring-purple-500/10 outline-none transition-all duration-200"
+                          placeholder="hello@example.com"
+                        />
+                      </div>
+                      <div>
+                        <label className="block text-sm font-medium text-gray-700 mb-1.5 ml-1">Parent's Phone</label>
+                        <input
+                          type="tel"
+                          required
+                          className="w-full px-5 py-3 rounded-xl border border-gray-200 bg-gray-50 focus:bg-white focus:border-purple-500 focus:ring-4 focus:ring-purple-500/10 outline-none transition-all duration-200"
+                          placeholder="+234..."
+                        />
+                      </div>
+                    </div>
+                  </div>
+
+                  <button
+                    type="submit"
+                    className="w-full mt-2 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white font-bold py-4 rounded-xl shadow-lg hover:shadow-xl transition transform hover:-translate-y-0.5"
+                  >
+                    Join Waitlist
+                  </button>
+                </form>
+              </div>
+            </motion.div>
+          </div>
+        )}
+      </AnimatePresence>
 
     </main>
   );
